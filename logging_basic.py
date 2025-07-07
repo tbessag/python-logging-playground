@@ -27,6 +27,9 @@ formatter = logging.Formatter(
 stream_handler.setFormatter(formatter)
 
 # 4. Attach the handler to the logger (do it once!)
+file_handler = logging.FileHandler("app.log")
+
+logger.addHandler(file_handler)
 logger.addHandler(stream_handler)
 
 # 5. Emit some log records with different severities
