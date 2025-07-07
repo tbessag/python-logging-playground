@@ -1,0 +1,5 @@
+This is DEBUG – useful while developing
+This is INFO – standard operational messages
+This is WARNING – something unexpected happened
+This is ERROR – the operation failed but the program is still running
+This is CRITICAL – the program might not be able to continue

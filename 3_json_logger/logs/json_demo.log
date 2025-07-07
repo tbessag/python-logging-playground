@@ -1,0 +1,72 @@
+2025-07-07 08:17:07 | __main__ | INFO | 🚀 Starting JSON logger demo
+2025-07-07 08:17:07 | __main__ | DEBUG | 0 squared is 0
+2025-07-07 08:17:07 | __main__ | DEBUG | 1 squared is 1
+2025-07-07 08:17:07 | __main__ | DEBUG | 2 squared is 4
+2025-07-07 08:17:07 | __main__ | DEBUG | 3 squared is 9
+2025-07-07 08:17:07 | __main__ | DEBUG | 4 squared is 16
+2025-07-07 08:17:07 | __main__ | DEBUG | 5 squared is 25
+2025-07-07 08:17:07 | __main__ | DEBUG | 6 squared is 36
+2025-07-07 08:17:07 | __main__ | DEBUG | 7 squared is 49
+2025-07-07 08:17:07 | __main__ | DEBUG | 8 squared is 64
+2025-07-07 08:17:07 | __main__ | DEBUG | 9 squared is 81
+2025-07-07 08:17:07 | __main__ | DEBUG | 10 squared is 100
+2025-07-07 08:17:07 | __main__ | DEBUG | 11 squared is 121
+2025-07-07 08:17:07 | __main__ | DEBUG | 12 squared is 144
+2025-07-07 08:17:07 | __main__ | ERROR | Computation failed
+Traceback (most recent call last):
+  File "/Users/Thomas/Desktop/local_dev/logging/3_json_logger/json_logger.py", line 121, in main
+    result = expensive_operation(i)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Thomas/Desktop/local_dev/logging/3_json_logger/json_logger.py", line 112, in expensive_operation
+    raise ValueError("Bad luck!")
+ValueError: Bad luck!
+2025-07-07 08:17:07 | __main__ | DEBUG | 14 squared is 196
+2025-07-07 08:17:07 | __main__ | INFO | ✅ Finished demo run
+2025-07-07 08:19:19 | __main__ | INFO | 🚀 Starting JSON logger demo
+2025-07-07 08:19:19 | __main__ | DEBUG | 0 squared is 0
+2025-07-07 08:19:19 | __main__ | DEBUG | 1 squared is 1
+2025-07-07 08:19:19 | __main__ | DEBUG | 2 squared is 4
+2025-07-07 08:19:19 | __main__ | DEBUG | 3 squared is 9
+2025-07-07 08:19:19 | __main__ | DEBUG | 4 squared is 16
+2025-07-07 08:19:19 | __main__ | DEBUG | 5 squared is 25
+2025-07-07 08:19:19 | __main__ | DEBUG | 6 squared is 36
+2025-07-07 08:19:19 | __main__ | DEBUG | 7 squared is 49
+2025-07-07 08:19:19 | __main__ | DEBUG | 8 squared is 64
+2025-07-07 08:19:19 | __main__ | DEBUG | 9 squared is 81
+2025-07-07 08:19:19 | __main__ | DEBUG | 10 squared is 100
+2025-07-07 08:19:19 | __main__ | DEBUG | 11 squared is 121
+2025-07-07 08:19:19 | __main__ | DEBUG | 12 squared is 144
+2025-07-07 08:19:19 | __main__ | ERROR | Computation failed
+Traceback (most recent call last):
+  File "/Users/Thomas/Desktop/local_dev/logging/3_json_logger/json_logger.py", line 121, in main
+    result = expensive_operation(i)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Thomas/Desktop/local_dev/logging/3_json_logger/json_logger.py", line 112, in expensive_operation
+    raise ValueError("Bad luck!")
+ValueError: Bad luck!
+2025-07-07 08:19:19 | __main__ | DEBUG | 14 squared is 196
+2025-07-07 08:19:19 | __main__ | INFO | ✅ Finished demo run
+2025-07-07 08:20:08 | __main__ | INFO | 🚀 Starting JSON logger demo
+2025-07-07 08:20:08 | __main__ | DEBUG | 0 squared is 0
+2025-07-07 08:20:08 | __main__ | DEBUG | 1 squared is 1
+2025-07-07 08:20:08 | __main__ | DEBUG | 2 squared is 4
+2025-07-07 08:20:08 | __main__ | DEBUG | 3 squared is 9
+2025-07-07 08:20:08 | __main__ | DEBUG | 4 squared is 16
+2025-07-07 08:20:08 | __main__ | DEBUG | 5 squared is 25
+2025-07-07 08:20:08 | __main__ | DEBUG | 6 squared is 36
+2025-07-07 08:20:08 | __main__ | DEBUG | 7 squared is 49
+2025-07-07 08:20:08 | __main__ | DEBUG | 8 squared is 64
+2025-07-07 08:20:08 | __main__ | DEBUG | 9 squared is 81
+2025-07-07 08:20:08 | __main__ | DEBUG | 10 squared is 100
+2025-07-07 08:20:08 | __main__ | DEBUG | 11 squared is 121
+2025-07-07 08:20:08 | __main__ | DEBUG | 12 squared is 144
+2025-07-07 08:20:08 | __main__ | ERROR | Computation failed
+Traceback (most recent call last):
+  File "/Users/Thomas/Desktop/local_dev/logging/3_json_logger/json_logger.py", line 121, in main
+    result = expensive_operation(i)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Thomas/Desktop/local_dev/logging/3_json_logger/json_logger.py", line 112, in expensive_operation
+    raise ValueError("Bad luck!")
+ValueError: Bad luck!
+2025-07-07 08:20:08 | __main__ | DEBUG | 14 squared is 196
+2025-07-07 08:20:08 | __main__ | INFO | ✅ Finished demo run

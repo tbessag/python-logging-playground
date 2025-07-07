@@ -1,0 +1,76 @@
+# logging_config.yaml
+# --------------------
+# A **stand‑alone** YAML dictConfig that works out‑of‑the‑box—no custom
+# Python modules required.  It mirrors our earlier setup (JSON to stdout +
+# rotating plaintext file) but avoids external filters, so you can drop
+# these two files into any project and run immediately:
+#   ├─ logging_config.yaml   ← this file
+#   └─ yaml_loader_demo.py   ← tiny bootstrap script (see below)
+#
+# ------------------------------------------------------------
+# Quick start
+# ------------------------------------------------------------
+# Install deps:
+#     pip install pyyaml python-json-logger
+#
+# yaml_loader_demo.py (put next to this YAML):
+# ------------------------------------------------------------
+# import logging.config, pathlib, yaml
+# cfg = yaml.safe_load(pathlib.Path("logging_config.yaml").read_text())
+# logging.config.dictConfig(cfg)
+# logger = logging.getLogger(__name__)
+# logger.info("🎉 YAML logging active!")
+# ------------------------------------------------------------
+# Run:
+#     python yaml_loader_demo.py
+#
+# -----------------------------------------------------------------------
+version: 1
+
+# -----------------------------------------------------------------------
+# Formatters
+# -----------------------------------------------------------------------
+formatters:
+  json:
+    "()": pythonjsonlogger.jsonlogger.JsonFormatter
+    fmt: "%(asctime)s %(levelname)s %(name)s %(message)s"
+    datefmt: "%Y-%m-%dT%H:%M:%S%z"
+    rename_fields:
+      asctime: timestamp
+      levelname: level
+    json_ensure_ascii: false
+    json_indent: 2  # pretty for humans; set to null for compact shipping
+
+  plain:
+    format: "%(asctime)s | %(name)s | %(levelname)s | %(message)s"
+    datefmt: "%Y-%m-%d %H:%M:%S"
+
+# -----------------------------------------------------------------------
+# Handlers
+# -----------------------------------------------------------------------
+handlers:
+  console:
+    class: logging.StreamHandler
+    level: INFO
+    formatter: json
+    stream: ext://sys.stdout
+
+  file:
+    class: logging.handlers.RotatingFileHandler
+    level: DEBUG
+    formatter: plain
+    filename: logs/yaml_demo.log
+    maxBytes: 1048576  # 1 MiB
+    backupCount: 3
+    encoding: utf-8
+
+# -----------------------------------------------------------------------
+# Root logger
+# -----------------------------------------------------------------------
+root:
+  level: DEBUG
+  handlers: [console, file]
+
+# Keep third‑party warnings visible.  Set to true if you want *only* your
+# app’s logs.
+disable_existing_loggers: false
